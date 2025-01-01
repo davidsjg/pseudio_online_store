@@ -1,9 +1,7 @@
 import React from "react";
 import "./Product.css";
 
-function Product(props) {
-  let product = props.value;
-
+function Product({product}) {
 
   return (
     <>
@@ -12,7 +10,8 @@ function Product(props) {
         <div className="productCat2">{product.category}</div>
 
         <div className="productTitle">
-          {product.title}
+       
+          {product.title.substring(0, 75)}...  
         </div>
         <div className="productRating">
           Rating: {product.rating.rate}

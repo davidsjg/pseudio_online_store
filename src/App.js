@@ -9,6 +9,7 @@ import productArray from "./productTest";
 import Header from "./Header/Header";
 import Banner from "./Banner/Banner";
 import SliderLocal from "./SliderLocal/SliderLocal";
+import CategoryPaginate from "./CategoryPaginate/CategoryPaginate";
 
 function App() {
   const [data, setData] = useState(null);
@@ -20,6 +21,8 @@ function App() {
   const categories = useRef(categoryArray);
   const localData = useRef([]);
   const [timer, setTimer] = useState();
+
+  let tempCats = [`men's clothing`, `jewelry`, `electronics`, `women's clothing`];
 
   /*
   useEffect(() => {
@@ -49,7 +52,6 @@ function App() {
       setIsLoading(false);
     }, 1000); // 1000 milliseconds = 1 second
   }, []);
-  
 
   const handleUpdateState = (newValue) => {
     setUserSelect(newValue);
@@ -79,7 +81,10 @@ function App() {
           value={categories.current}
           onUpdateState={handleUpdateState}
         />
-        <ProductDisplay data={displayData} filterText={filterText} />
+        {tempCats.map((cat) => {
+          return <CategoryPaginate data={data} category={cat} />;
+        })}
+        {/*      <ProductDisplay data={displayData} filterText={filterText} />  */}
       </div>
     </>
   );
