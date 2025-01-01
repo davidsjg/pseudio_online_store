@@ -8,16 +8,22 @@
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
+    transition: all .2s ease-in-out;
+      /* 
     box-shadow: rgb(0 0 0 / 12%) 0px 26px 30px -10px,
     rgb(0 0 0 / 73%) 0px 16px 10px -10px;
 
-    box-shadow: 0 6px 8px -2px gray;
+ box-shadow: 0 6px 8px -2px gray; */
 
-    border-style: double ;
-    border-color: gray;
-    border-width: 5px;
+
+ border-style: solid;
+    border-color: darkgrey;
+    border-width: 1px;
     background-color: rgb(255, 161, 161);
     background-color: #d2c7e7;
+}
+.product:hover{
+    box-shadow: 0 0 5px black;
 }
 
 .image1{
@@ -26,7 +32,7 @@
     height: 10vw;
     font-weight: bold;
     object-fit: cover;
-    border: 2px solid black;
+    border: 1px solid darkgray;
     border-radius: 10px;
 }
 
