@@ -5,34 +5,33 @@
     font-style:bold;
     align-items: center;
     justify-content:flex-start;
+    transition: all .2s ease-in-out;
+}
+
+.mainLeft img{
+    margin: 0 10px;
 }
 
 .mlImage{
     height: 40px;
+    transition: all .2s ease-in-out;
 }
 
 .mlImage2{
-    height: 30px;
+    height: 20px;
+    transition: all .2s ease-in-out;
 }
 .mlImage2:hover{
-    height: 35px;
     cursor: pointer;
-
 }
 
-.mLContain{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
 
 .adjPic{
 padding-bottom: 2px ;
 }
 
 .adjPic2{
-    padding-bottom: 3px ; 
+    padding-bottom: 2px ; 
 }
 
 .adjPic3{

@@ -21,7 +21,7 @@ function ProductDisplay({ data, filterText }) {
 
             if (filterText !== null) {
               if (categoryCheck !== -1 || titleCheck !== -1) {
-                console.log("no matches");
+                //console.log("no matches");
               } else {
                 return;
               }

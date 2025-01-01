@@ -15,7 +15,6 @@ function Banner({ data }) {
   });
 
   setTimeout(() => {
-    console.log(imageCounter);
 
     if(imageCounter === 20){
         setImageCounter(0)

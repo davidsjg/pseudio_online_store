@@ -1,9 +1,9 @@
 .product{
     width: 200px;
-    height: 300px;
+    height: 400px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: space-evenly;
     border-radius: 20px;
     padding: 5px;
@@ -12,9 +12,6 @@
     border-style: solid;
     border-color: lightgray;
     border-width: 1px;
-    background-color: rgb(255, 161, 161);
-    background-color: #d2c7e7;
-    background-color: aliceblue;;
     background-color: white;
 }
 .product:hover{
@@ -22,9 +19,15 @@
     background-color: aliceblue;;
 }
 
+.product div{
+    margin-left: 10px;
+}
+
+
+
 .image1{
-    height: 250px;
     width: 200px;
+    height: 230px;
     font-weight: bold;
     object-fit:fill;
 
@@ -33,6 +36,21 @@
     background-color: white;
 }
 
+.productCat2{
+padding-bottom: 3px;
+color: darkgrey;
+}
+
+.productTitle{
+    height: 100px;
+    align-items: center;
+    font-size: large;
+}
+
 .productPrice{
-    margin-top: 20px;
+    margin-top: 2px;
+}
+
+.productRating{
+   margin-left: 10px;
 }
