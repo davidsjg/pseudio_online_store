@@ -1,0 +1,19 @@
+.categoryContain{
+    /* margin-top: 0vh; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content:space-around;
+    margin-bottom: 10px;
+}
+
+.item{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+.item1{
+
+}
