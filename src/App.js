@@ -19,6 +19,7 @@ function App() {
   const [filterText, setFilterText] = useState("");
   const categories = useRef(categoryArray);
   const localData = useRef([]);
+  const [timer, setTimer] = useState();
 
   /*
   useEffect(() => {
@@ -48,6 +49,7 @@ function App() {
       setIsLoading(false);
     }, 1000); // 1000 milliseconds = 1 second
   }, []);
+  
 
   const handleUpdateState = (newValue) => {
     setUserSelect(newValue);
