@@ -1,26 +1,26 @@
 import React from "react";
 import "./LeftHeader.css";
-import logo from './pseudio.png'
+import logo from "./pseudio.png";
+import homePic from "./Home.png";
+import productPic from "./Products.png";
+import discountPic from "./Discounts.png";
+import about from "./About.png";
 
 function Header(props) {
   return (
     <>
       <div className="mainLeft">
-        <div className="mlImage">
-          <img src={logo} alt=''/>
-        </div>
-        <div className="mLContain">
-          <span>Home</span>
-        </div>
-        <div className="mLContain">
-          <span>Products</span>
-        </div>
-        <div className="mLContain">
-          <span>Discounts</span>
-        </div>
-        <div className="mLContain">
-          <span>About Us</span>
-        </div>
+ 
+          <img className="mlImage" src={logo} alt="" />
+  
+          <img className="mlImage2 adjPic" src={homePic} alt="" />
+     
+          <img className="mlImage2 adjPic2" src={productPic} alt="" />
+     
+          <img className="mlImage2 adjPic2" src={discountPic} alt="" />
+    
+          <img className="mlImage2 " src={about} alt="" />
+ 
       </div>
     </>
   );

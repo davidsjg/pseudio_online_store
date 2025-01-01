@@ -4,20 +4,20 @@
     font: bold;
     font-style:bold;
     align-items: center;
-    justify-content: space-evenly;
-    
+    justify-content:flex-start;
 }
 
-.mainLeft img{
+.mlImage{
     height: 40px;
 }
-.mainLeft img:hover{
+
+.mlImage2{
+    height: 30px;
+}
+.mlImage2:hover{
+    height: 35px;
     cursor: pointer;
-    background-color: lightslategray;
-    height: 40px;
-    border-color: black;
-    border-radius: 3px;
-    border-width: 15px;
+
 }
 
 .mLContain{
@@ -27,21 +27,15 @@
     align-items: center;
 }
 
-.mLContain span{
-
+.adjPic{
+padding-bottom: 2px ;
 }
 
-
-.mLContain:hover{
-    cursor: pointer;
-    background-color: white;
-    background-color: aliceblue;
-    height: 40px;
-    border-style: solid;
-    border-color: darkgray;
-    border-width: 1px;
-    border-radius: 2px;
-
+.adjPic2{
+    padding-bottom: 3px ; 
 }
 
+.adjPic3{
+    padding-bottom: 1px ; 
+}
 

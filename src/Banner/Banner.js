@@ -3,16 +3,12 @@ import "./Banner.css";
 import logo from "../Header/LeftHeader/pseudio.png";
 import SliderLocal from "../SliderLocal/SliderLocal";
 import { useState } from "react";
+import deals from './deals.png'
 
 function Banner({ data }) {
-  //slider local will be an image div
-  //need to update what image it displays
   const [imageDisplay, setImageDisplay] = useState(data[0].image);
   const [imageCounter, setImageCounter] = useState(0);
-  let localBool = false;
 
-  let currImage = 0;
-  let currIndex = 0;
   let picArr = [];
   data.forEach((element) => {
     picArr.push(element.image);
@@ -23,35 +19,24 @@ function Banner({ data }) {
 
     if(imageCounter === 20){
         setImageCounter(0)
-        setImageDisplay(picArr[0]);
+        setImageDisplay(picArr[1]);
       } else {
         setImageCounter(imageCounter + 1);
         setImageDisplay(picArr[imageCounter]);
       }
 
-  }, 3000);
+  }, 12000);
 
-
-
-
-  /*
-    function secondTimeOut(index){
-        setTimeout(() => {
-            currImage = picArr[index]
-            console.log(currImage)
-            currIndex += 1;
-            secondTimeOut(currIndex)
-            setImageDisplay(currImage)
-          }, 3000); 
-    }
-
-*/
   return (
     <>
-      <div className="bannerContain">
+      <div className="bannerContain1">
         <img src={logo} />
+        <SliderLocal image={imageDisplay} />
+        <div className="blankBan">
+        <img className="currentDeals" src={deals} />
+        </div>
       </div>
-      <SliderLocal image={imageDisplay} />
+
     </>
   );
 }

@@ -1,5 +1,7 @@
 .banImage{
-    height: 100px;
-    width: 100px;
+    height: 180px;
+    width: 180px;
     transition: all .2s ease-in-out;
+    margin-left: 10px;
 }
+

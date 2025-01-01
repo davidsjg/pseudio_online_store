@@ -73,7 +73,7 @@ function App() {
       <div className="appContain">
         <Header onFilterTextChange={setFilterText} />
 
-        <Banner data={displayData} />
+        <Banner data={data} />
 
         <CategoryDisplay
           value={categories.current}
