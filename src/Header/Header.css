@@ -10,3 +10,10 @@
     margin: 0;
     index: 0;
 }
+
+.rightHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

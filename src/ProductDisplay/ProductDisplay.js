@@ -2,8 +2,8 @@ import React from "react";
 import "./ProductDisplay.css";
 import Product from "../Product/Product";
 
-function ProductDisplay(props) {
-  let data = props.value;
+function ProductDisplay({data, filterText}) {
+  //let data = props.value;
 
   return (
     <>
@@ -11,6 +11,29 @@ function ProductDisplay(props) {
         {data &&
           data.map((item) => {
             let myClass = `item item` + item.id;
+            let categoryCheck = item.category.toLowerCase().indexOf(filterText.toLowerCase())
+            let titleCheck = item.title.toLowerCase().indexOf(filterText.toLowerCase())
+
+
+            if(filterText !== null){
+              if(categoryCheck !== -1 || titleCheck !== -1){
+                console.log('no matches')
+              } else{
+                return;
+              }
+
+            }
+
+
+
+/*
+            if (((filterText !== null) && item.category.toLowerCase().indexOf(filterText.toLowerCase()) === -1) || (filterText !== null && item.title.toLowerCase().indexOf(filterText.toLowerCase())) === -1
+            ) {
+              return ;
+            }
+
+*/
+
             return (
               <div className={myClass} key={item.id}>
                 <Product value={item} />

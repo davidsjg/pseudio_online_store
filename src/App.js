@@ -14,6 +14,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [userSelect, setUserSelect] = useState();
+  const [filterText, setFilterText] = useState('');
   const categories = useRef(categoryArray);
   const localData = useRef([]);
 
@@ -67,12 +68,12 @@ useEffect(() => {
   return (
     <>
       <div className="appContain">
-        <Header/>
+        <Header onFilterTextChange={setFilterText}/>
         <CategoryDisplay
           value={categories.current}
           onUpdateState={handleUpdateState}
         />
-        <ProductDisplay value={displayData} />
+        <ProductDisplay data={displayData} filterText={filterText} />
       </div>
     </>
   );

@@ -14,7 +14,7 @@ function Category({ value, onUpdateState }) {
         onUpdateState(`men's clothing`);
         break;
       case "2":
-        onUpdateState(`jewelery`);
+        onUpdateState(`jewelry`);
         break;
       case "3":
         onUpdateState(`electronics`);

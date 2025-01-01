@@ -27,14 +27,21 @@
     align-items: center;
 }
 
+.mLContain span{
+
+}
+
 
 .mLContain:hover{
     cursor: pointer;
-    background-color: lightslategray;
+    background-color: white;
+    background-color: aliceblue;
     height: 40px;
-    border-color: black;
-    border-radius: 3px;
-    border-width: 15px;
+    border-style: solid;
+    border-color: darkgray;
+    border-width: 1px;
+    border-radius: 2px;
+
 }
 
 
