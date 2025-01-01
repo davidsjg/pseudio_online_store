@@ -14,11 +14,11 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [userSelect, setUserSelect] = useState();
-  const [filterText, setFilterText] = useState('');
+  const [filterText, setFilterText] = useState("");
   const categories = useRef(categoryArray);
   const localData = useRef([]);
 
-/*
+  /*
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
@@ -39,14 +39,13 @@ function App() {
 
   }, []);
 */
-useEffect(() => {
-  setTimeout(() => {
-    setData(productArray);
-    setDisplayData(productArray);
-    setIsLoading(false);
-  }, 1000); // 1000 milliseconds = 1 second
-}, [])
-
+  useEffect(() => {
+    setTimeout(() => {
+      setData(productArray);
+      setDisplayData(productArray);
+      setIsLoading(false);
+    }, 1000); // 1000 milliseconds = 1 second
+  }, []);
 
   const handleUpdateState = (newValue) => {
     setUserSelect(newValue);
@@ -68,11 +67,8 @@ useEffect(() => {
   return (
     <>
       <div className="appContain">
-        <Header onFilterTextChange={setFilterText}/>
-        <CategoryDisplay
-          value={categories.current}
-          onUpdateState={handleUpdateState}
-        />
+        <Header onFilterTextChange={setFilterText} />
+        <CategoryDisplay value={categories.current} onUpdateState={handleUpdateState}/>
         <ProductDisplay data={displayData} filterText={filterText} />
       </div>
     </>

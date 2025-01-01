@@ -10,7 +10,7 @@ export default function SearchBar({ filterText, onFilterTextChange }) {
           type="text"
           value={filterText}
           className="inputCl"
-          placeholder="Search Category..."
+          placeholder="Search..."
           onChange={(e) => {
             onFilterTextChange(e.target.value);
             testFunc(e.target);
