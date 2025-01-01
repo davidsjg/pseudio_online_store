@@ -17,6 +17,11 @@
     transition: all .2s ease-in-out;
 }
 
+
+.mlImage:hover{
+    cursor: pointer;
+}
+
 .mlImage2{
     height: 20px;
     transition: all .2s ease-in-out;
