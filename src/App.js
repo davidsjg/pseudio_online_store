@@ -7,6 +7,8 @@ import categoryArray from "./CategoryDisplay/categories";
 import filterArray from "./controllerFunctions";
 import productArray from "./productTest";
 import Header from "./Header/Header";
+import Banner from "./Banner/Banner";
+import SliderLocal from "./SliderLocal/SliderLocal";
 
 function App() {
   const [data, setData] = useState(null);
@@ -68,7 +70,13 @@ function App() {
     <>
       <div className="appContain">
         <Header onFilterTextChange={setFilterText} />
-        <CategoryDisplay value={categories.current} onUpdateState={handleUpdateState}/>
+
+        <Banner data={displayData} />
+
+        <CategoryDisplay
+          value={categories.current}
+          onUpdateState={handleUpdateState}
+        />
         <ProductDisplay data={displayData} filterText={filterText} />
       </div>
     </>

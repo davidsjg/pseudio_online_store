@@ -6,17 +6,15 @@ function Product(props) {
 
   return (
     <>
+      <div className="product">
+        <img className="image1" src={product.image} alt={product.title} />
 
-        <div className="product">
-          <section className="productTitle">
-            <span style={{ fontWeight: "bold" }}>Title: </span> {product.title.substring(0, 25)}...
-          </section>
-          <section>
-            <img className="image1" src={product.image} alt={product.title} />
-          </section>
-          <section className="productPrice">${product.price}</section>
-        </div>
-
+        <section className="productTitle">
+          <span style={{ fontWeight: "bold" }}>Title: </span>{" "}
+          {product.title.substring(0, 25)}...
+        </section>
+        <section className="productPrice">${product.price}</section>
+      </div>
     </>
   );
 }
