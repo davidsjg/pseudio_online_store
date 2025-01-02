@@ -8,6 +8,7 @@ function CategoryPaginate({ data, category }) {
   const itemsPerPage = 5;
 
   let tempArr = [];
+  let tempDisabled =false;
 
   data.forEach((obj) => {
     if (obj.category === category) {
@@ -15,9 +16,14 @@ function CategoryPaginate({ data, category }) {
     }
   });
 
+
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = tempArr.slice(indexOfFirstItem, indexOfLastItem);
+
+  if(currentItems.length < itemsPerPage){
+    tempDisabled = true;
+  }
 
   console.log(indexOfLastItem)
 
@@ -41,7 +47,7 @@ function CategoryPaginate({ data, category }) {
 
             <button
               onClick={() => setCurrentPage(currentPage + 1)}
-              disabled={indexOfLastItem > data.length}
+              disabled={indexOfLastItem > tempArr.length}
             >
               Next
             </button>
